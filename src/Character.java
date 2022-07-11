@@ -28,4 +28,22 @@ public class Character {
             System.out.println("Dragon "+name+" is dead");
         }
     }
+
+    public double getLifePoint(){
+        return this.lifePoint;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", lifePoint=" + lifePoint +
+                ", attackPoint=" + attackPoint +
+                ", defensePoint=" + defensePoint +
+                '}';
+    }
 }
