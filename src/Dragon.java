@@ -25,10 +25,20 @@ public class Dragon {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "name=" + name +
+                ", lifePoint=" + lifePoint +
+                ", attackPoint=" + attackPoint +
+                ", defensePoint=" + defensePoint +
+                '}';
+    }
+
     public void attackAnother (Dragon d){
         if (this.lifePoint>0){
             if (this.attackPoint>d.defensePoint){
-                this.sustainDamage(attackPoint);
+                d.sustainDamage(attackPoint);
             }
             else {
                 System.out.println("No dammage done");}
