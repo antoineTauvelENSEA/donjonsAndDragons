@@ -17,5 +17,21 @@ public class Dragon {
         System.out.println(scream);
     }
 
-    
+    public void sustainDamage(double dammage){
+        this.lifePoint=this.lifePoint-dammage;
+        if (this.lifePoint<0) this.lifePoint=0;
+        if (this.lifePoint==0){
+            System.out.println("Dragon "+name+" is dead");
+        }
+    }
+
+    public void attackAnother (Dragon d){
+        if (this.lifePoint>0){
+            if (this.attackPoint>d.defensePoint){
+                this.sustainDamage(attackPoint);
+            }
+            else {
+                System.out.println("No dammage done");}
+        }
+    }
 }
